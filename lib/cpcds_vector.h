@@ -2,6 +2,7 @@
 #ifndef INCLUDED_CPCDS_VECTOR_H
 #define INCLUDED_CPCDS_VECTOR_H
 #include<stdbool.h>
+#include<stdlib.h>
 #include"cpcds_impl/cpcds_vector/cpcds_vector_maker.h"
 #include"cpcds_impl/cpcds_vector/cpcds_vector_append.h"
 #include"cpcds_impl/cpcds_vector/cpcds_vector_insert.h"

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_IMPL_CPPSTRING_CPPSTRING_UTILS_H
-#define INCLUDED_CPCDS_IMPL_CPPSTRING_CPPSTRING_UTILS_H
+#ifndef INCLUDED_CPPSTRING_UTILS_H
+#define INCLUDED_CPPSTRING_UTILS_H
 #include<stdbool.h>
 #define cpcds_print_cppstr(f,s)fprintf(f,s.bytes)
 #define cpcds_stdprint_cppstr(s)printf(s.bytes)

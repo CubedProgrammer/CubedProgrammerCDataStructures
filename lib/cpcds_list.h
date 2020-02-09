@@ -1,6 +1,7 @@
 #ifndef __cplusplus
 #ifndef CPCDS_LIST_H_INCLUDED
 #define CPCDS_LIST_H_INCLUDED
+#include<stdlib.h>
 #include"cpcds_impl/cpcds_list/cpcds_list_maker.h"
 #include"cpcds_impl/cpcds_list/cpcds_list_insert.h"
 #include"cpcds_impl/cpcds_list/cpcds_list_util.h"
