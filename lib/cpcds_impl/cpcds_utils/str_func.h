@@ -13,6 +13,10 @@ cppstring ull_to_cppstr(unsigned long long ull)
 		destroy(tmp);
 	}
 	str_reverse_order(&ans);
+	if(ans.len==0)
+	{
+		ans=mk_from_cstr("0");
+	}
 	return ans;
 }
 cppstring ll_to_cppstr(long long ll)
@@ -29,6 +33,10 @@ cppstring ll_to_cppstr(long long ll)
 	else
 	{
 		ans=ull_to_cppstr(ll);
+	}
+	if(ans.len==0)
+	{
+		ans=mk_from_cstr("0");
 	}
 	return ans;
 }
