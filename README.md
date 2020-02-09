@@ -8,5 +8,9 @@ Use define_cpcds_vector(n,t) to initialize a vector type that stores type t with
 Can also use cpcds_vector_define(t) to initialize a vector type that stores type t with same extention name.
 ## cpcds_list
 File: cpcds_list.h
-Use define_cpcds_list(n,t) to initialize a list type that stores type t with extention name n, full name will be cpcds_vector_n.
+Use define_cpcds_list(n,t) to initialize a list type that stores type t with extention name n, full name will be cpcds_list_n.
 Can also use cpcds_list_define(t) to initialize a list type that stores type t with same extention name.
+## cpcds_deque
+File: cpcds_deque.h
+Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with extention name n, full name will be cpcds_deque_n.
+Can also use cpcds_deque_define(t) to initialize a list type that stores type t with same extention name.
