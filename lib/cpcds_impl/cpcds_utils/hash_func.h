@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef CPCDS_UTILS_HASH_FUNC_H_INCLUDED
-#define CPCDS_UTILS_HASH_FUNC_H_INCLUDED
+#ifndef INCLUDED_HASH_FUNC_H
+#define INCLUDED_HASH_FUNC_H
 typedef unsigned long long int cpcds_hash_v;
 cpcds_hash_v cpcds_hash_char(char c)
 {
