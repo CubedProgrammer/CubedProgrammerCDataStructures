@@ -415,8 +415,50 @@ Param str is a function that converts an element in the list to a cppstring.
 Converts a list into a string.
 ### Macros
 deftypes_cpcds_list defines a list type for common types such as char, int, long, double, and cppstring.
+
 defstruct_cpcds_list(s) defines a list type for struct s, with name s and type struct s.
 ## cpcds_deque
 File: cpcds_deque.h
 Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with extention name n, full name will be cpcds_deque_n.
 Can also use cpcds_deque_define(t) to initialize a list type that stores type t with same extention name.
+
+cpcds_deque is implemented as a linked list.
+
+All dq params are pointers to a deque unless otherwise stated.
+### Structures
+struct cpcds_deque_n (aka cpcds_deque_n)
+### Constructors
+#### cpcds_mk_deque_empty_n()
+Makes an empty deque.
+#### cpcds_mk_deque_copy_n(dq)
+Make a copy of a deque.
+### Functions
+#### cpcds_deque_get_front_n(dq)
+Gets the element at the front of the deque.
+#### cpcds_deque_get_back_n(dq)
+Gets the element at the back of the deque.
+#### cpcds_deque_clear_n(dq)
+Clears a deque of all its contents.
+#### cpcds_deque_append_n(dq,v)
+Param v is the item to append to the deque.
+
+Append an element to the back of the deque.
+#### cpcds_deque_prepend_n(dq,v)
+Param v is the item to prepend to the deque.
+Prepend an element to the front of the deque.
+#### cpcds_deque_pop_front_n(dq)
+Pops an element off of the front of the deque, and returns it.
+#### cpcds_deque_pop_back_n(dq)
+Pops an element off of the back of the deque, and returns it.
+#### cpcds_deque_push_n(dq,v)
+Param v is the value to push.
+
+Pushes an element onto this stack or queue.
+#### cpcds_deque_pop_n(dq)
+Pops an element off of the stack.
+#### cpcds_deque_poll_n(dq)
+Polls an element off of the queue.
+### Macros
+deftypes_cpcds_deque defines a deque type for commonly used types, such as char, int, long, double, and cppstring.
+
+defstruct_cpcds_deque(s)defines a deque type for struct s, with name s and type struct s.
