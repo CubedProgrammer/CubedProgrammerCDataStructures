@@ -324,6 +324,35 @@ __CPCDS_DEFAULT_VR is the default room for a vector.
 File: cpcds_list.h
 Use define_cpcds_list(n,t) to initialize a list type that stores type t with extention name n, full name will be cpcds_list_n.
 Can also use cpcds_list_define(t) to initialize a list type that stores type t with same extention name.
+
+cpcds_list is implemented as a doubly linked list.
+
+All params lis are meant to be a pointer to a list unless otherwise specified.
+### Structures
+struct cpcds_list_n (aka cpcds_list_a)
+### Constructors
+#### cpcds_mk_list_empty_n()
+Makes an empty list.
+#### cpcds_mk_list_copy_n(lis)
+Makes a copy of a list.
+### Functions
+#### cpcds_list_append_single_n(lis,v)
+Param v is the value to append.
+
+Appends an element to the end of a list.
+#### cpcds_list_pop_end_n(lis)
+Pops an element off of the end of the list and returns it.
+#### cpcds_list_prepend_single_n(lis,v)
+Param v is the value to prepend.
+
+Prepends an element to the start of the list.
+#### cpcds_list_pop_start_n(lis)
+Pops an element off of the beginning of the list and returns it.
+#### cpcds_list_get_head_n(lis)
+Gets the value at the beginning of the list.
+#### cpcds_list_get_tail_n(lis)
+Gets the value at the end of the list.
+### Macros
 ## cpcds_deque
 File: cpcds_deque.h
 Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with extention name n, full name will be cpcds_deque_n.
