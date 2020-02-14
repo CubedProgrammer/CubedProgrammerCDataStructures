@@ -37,6 +37,8 @@ Param s is the original cppstring.
 
 Creates a copy of a cppstring.
 
+### Functions
+
 str_char_at(s,index)
 
 Param s is a pointer to a cppstring.
@@ -198,11 +200,83 @@ cpcds_stdprint_cppstr(s)
 Prints a string into stdout.
 
 Param s is the cppstring that will be printed to stdout.
-### Functions
 ## cpcds_vector
 File: cpcds_vector.h
 Use define_cpcds_vector(n,t) to initialize a vector type that stores type t with extention name n, full name will be cpcds_vector_n.
 Can also use cpcds_vector_define(t) to initialize a vector type that stores type t with same extention name.
+
+### Structures
+struct cpcds_vector_n (aka cpcds_vector_n)
+### Constructor
+cpcds_mk_vec_room_n(size)
+
+Param size is the room of the vector.
+
+Creates a vector with a capacity of size.
+
+cpcds_mk_vec_default_n()
+
+Makes a vector with default room.
+
+cpcds_mk_vec_array_n(first,last)
+
+Params first and last are iterators to the beginning and end of the array.
+
+Creates a vector from an array, contents will be copied.
+
+cpcds_mk_vec_copy_n(vec)
+
+Param vec is a pointer to a vector.
+
+Makes a copy of an existing vector.
+### Functions
+cpcds_vec_get_at_n(vec,index)
+
+Param vec is a pointer to a vector.
+
+Param index is an index.
+
+Gets the element from a vector at some index.
+
+cpcds_vec_set_single_n(vec,index,val)
+
+Param vec is a pointer to a vector.
+
+Param index is an index.
+
+Param val is the value to change to.
+
+Changes the value of the vector at some index.
+
+cpcds_vec_fill_range_n(vec,v,index,len)
+
+Param vec is a pointer to a vector.
+
+Param v is the value to fill.
+
+Params index and len are the offset and length of the range.
+
+Fills a portion of vector with some value.
+
+cpcds_vec_set_array_n(vec,ind,first,last)
+
+Param vec is a pointer to a vector.
+
+Param ind is an index.
+
+Params first and last are iterators of an array.
+
+Copies an array into a portion of a vector.
+
+cpcds_vec_slice_array_n(vec,index,len)
+
+Param vec is a pointer to a vector.
+
+Params index and len are the offset and length of the subarray to slice.
+
+Returns a portion of the vector, leaving the vector unchanged.
+### Macros
+__CPCDS_DEFAULT_VR is the default room for a vector.
 ## cpcds_list
 File: cpcds_list.h
 Use define_cpcds_list(n,t) to initialize a list type that stores type t with extention name n, full name will be cpcds_list_n.
