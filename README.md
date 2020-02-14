@@ -318,8 +318,24 @@ Param vec is a pointer to a vector.
 Param h is a pointer to the hash function for individual elements in the vector.
 
 Hashes the vector, returns the hash value, should be unsigned long long int on 64-bit compiler.
+#### cpcds_vec_to_str_ptr_n(vec,str)
+Param vec is a pointer to a vector.
+
+Param str is a function that converts an element in the vector to a cppstring.
+
+Converts a vector into a string.
+#### cpcds_vec_to_str_n(vec,str)
+Param vec is a vector.
+
+Param str is a function that converts an element in the vector to a cppstring.
+
+Converts a vector into a string.
 ### Macros
 __CPCDS_DEFAULT_VR is the default room for a vector.
+
+deftypes_cpcds_vector defines a vector type for common types such as char, int, long, double, and cppstring.
+
+defstruct_cpcds_vector(s) defines a vector type for struct s, with name s and type struct s.
 ## cpcds_list
 File: cpcds_list.h
 Use define_cpcds_list(n,t) to initialize a list type that stores type t with extention name n, full name will be cpcds_list_n.
@@ -352,7 +368,54 @@ Pops an element off of the beginning of the list and returns it.
 Gets the value at the beginning of the list.
 #### cpcds_list_get_tail_n(lis)
 Gets the value at the end of the list.
+#### cpcds_list_append_list_n(lis,tba)
+Param tba is the list to be appended.
+
+Appends a list onto another list.
+#### cpcds_list_prepend_list_n(lis,tba)
+
+Param tba is the list to be prepended.
+
+Prepends a list onto another list.
+#### cpcds_list_insert_at_n(lis,index,v)
+Param index is the index to insert at.
+
+Param v is the value to insert.
+
+Insert an element at some index in the list.
+#### cpcds_list_first_index_n(lis,v,eq)
+Param v is the value to find.
+
+Param eq is a pointer to a bool function that will compare if two values are equal.
+
+Finds the first occurrence of an element.
+#### cpcds_list_last_index_n(lis,v,eq)
+Param v is the value to find.
+
+Param eq is a pointer to a bool function that will compare if two values are equal.
+
+Finds the last occurrence of an element.
+#### cpcds_list_get_section_n(lis,beginning,end)
+Params beginning and end are the bounds of the section.
+
+Gets a portion of a list, return value is of type struct cpcds_list_n.
+#### cpcds_list_for_each_n(lis,func_to_call)
+Param func_to_call is the function to call on each element.
+
+Loops through the list and calls a function on every element.
+#### cpcds_lis_to_str_ptr_n(lis,str)
+Param str is a function that converts an element in the list to a cppstring.
+
+Converts a list into a string.
+#### cpcds_lis_to_str_n(lis,str)
+Param lis is a list.
+
+Param str is a function that converts an element in the list to a cppstring.
+
+Converts a list into a string.
 ### Macros
+deftypes_cpcds_list defines a list type for common types such as char, int, long, double, and cppstring.
+defstruct_cpcds_list(s) defines a list type for struct s, with name s and type struct s.
 ## cpcds_deque
 File: cpcds_deque.h
 Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with extention name n, full name will be cpcds_deque_n.
