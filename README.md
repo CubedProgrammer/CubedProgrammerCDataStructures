@@ -92,10 +92,112 @@ Param index is the offset of the substring.
 Param len is the length of the substring.
 
 Copies a section of the string s and returns it.
+
+strindex_both_bounds(s,c,from,to)
+
+Param s is a pointer to a cppstring.
+
+Param c is the char to search.
+
+Params from and to are the bounds, from is included, to is now.
+
+Finds a character in a cppstring.
+
+strindex_lower_bound(s,c,from)
+
+Param s is a pointer to a cppstring.
+
+Param c is the char to search.
+
+Param from is the index to start searching from.
+
+Searches for a character in a cppstring.
+
+strindex_no_bound(s,c)
+
+Param s is a ointer to a cppstring.
+
+Param c is the char to search.
+
+Looks for the index of c.
+
+str_equal_pointer(s,t)
+
+Params s and t are pointers to cppstrings.
+
+Compares if the two cppstrings pointed to by the pointers, if they are equal, true is returned.
+
+str_equal_values(s,t)
+
+Params s and t are cppstrings.
+
+Compares if two cppstrings are equal, if they are equal, true is returned.
+
+str_reverse_order(s)
+
+Param s is a pointer to a cppstring.
+
+Reverses the order of a cppstring.
+
+str_to_upper(s)
+
+Param s is a cppstring.
+
+Converts all letters in a cppstring to uppercase.
+
+str_to_lower(s)
+
+Param s is a cppstring.
+
+Converts all letters in a cppstring to lowercase.
+
+str_replace_char(s,old,new)
+
+Param s is a cppstring.
+
+Param old is the character to replace.
+
+Param new is the character to replace with.
+
+Replaces certain chars in a cppstring.
+
+cstr(s)
+
+Param s is a pointer to a cppstring.
+
+Gets the C string of a cppstring, which is a char pointer.
+
+cstr_value(s)
+
+Param s is a cppstring.
+
+Gets the C string of a cppstring, which is a char pointer.
+
+cstr_fill_array(s,str)
+
+Param s is a pointer to a cppstring.
+
+Param str is a char pointer.
+
+Copies the contents of s into str.
 ### Macros
 destroy(str)
+
 Destroys the string, frees memory associated with it.
+
 Param str is the string to destroy.
+
+cpcds_print_cppstr(f,s)
+
+Prints the string into a file.
+
+Params f and s are a pointer to a file object and a cppstring, respectively.
+
+cpcds_stdprint_cppstr(s)
+
+Prints a string into stdout.
+
+Param s is the cppstring that will be printed to stdout.
 ### Functions
 ## cpcds_vector
 File: cpcds_vector.h
