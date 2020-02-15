@@ -413,6 +413,12 @@ Param lis is a list.
 Param str is a function that converts an element in the list to a cppstring.
 
 Converts a list into a string.
+#### cpcds_list_move_iter_n(it,dist)
+Param it is an iterator in a list, specifically a cpcds_lnode_n.
+
+Param dist is the distance to move the iterator.
+
+Moves an iterator by some distance, negative is towards head, positive is towards tail.
 ### Macros
 deftypes_cpcds_list defines a list type for common types such as char, int, long, double, and cppstring.
 
