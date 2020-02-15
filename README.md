@@ -343,6 +343,16 @@ Can also use cpcds_list_define(t) to initialize a list type that stores type t w
 
 cpcds_list is implemented as a doubly linked list.
 
+Alternatively, you can define parts of the features of a list, by using the following macros.
+#### define_cpcds_lmk(n,t), cpcds_lmk_define(t)
+Defines structure of the list, as well as basic append, prepend, and pop functions.
+#### define_cpcds_lins(n,t), cpcds_lins_define(t)
+Defines insert functions for list.
+#### define_cpcds_lutil(n,t), cpcds_lutil_define(t)
+Defines utility functions for list.
+#### define_cpcds_liter(n,t), cpcds_liter_define(t)
+Defines a function for moving nodes.
+
 All params lis are meant to be a pointer to a list unless otherwise specified.
 ### Structures
 struct cpcds_list_n (aka cpcds_list_a)
@@ -429,6 +439,12 @@ Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with e
 Can also use cpcds_deque_define(t) to initialize a list type that stores type t with same extention name.
 
 cpcds_deque is implemented as a linked list.
+#### define_cpcds_dqmk(n,t), cpcds_dqmk_define(t)
+Defines the structure and basic get head and tail functions for list.
+#### define_cpcds_dqappend(n,t), cpcds_dqappend_define(t)
+Defines append, prepend, and pop functions for list.
+#### define_cpcds_dqalias(n,t), cpcds_dqalias_define(t)
+Defines function aliases, specifically for usage as stacks and queue.
 
 All dq params are pointers to a deque unless otherwise stated.
 ### Structures
@@ -468,3 +484,5 @@ Polls an element off of the queue.
 deftypes_cpcds_deque defines a deque type for commonly used types, such as char, int, long, double, and cppstring.
 
 defstruct_cpcds_deque(s)defines a deque type for struct s, with name s and type struct s.
+
+## cpcds_unordered_map
