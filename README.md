@@ -436,7 +436,7 @@ defstruct_cpcds_list(s) defines a list type for struct s, with name s and type s
 ## cpcds_deque
 File: cpcds_deque.h
 Use define_cpcds_deque(n,t) to initialize a deque type that stores type t with extention name n, full name will be cpcds_deque_n.
-Can also use cpcds_deque_define(t) to initialize a list type that stores type t with same extention name.
+Can also use cpcds_deque_define(t) to initialize a deque type that stores type t with same extention name.
 
 cpcds_deque is implemented as a linked list.
 #### define_cpcds_dqmk(n,t), cpcds_dqmk_define(t)
@@ -486,3 +486,58 @@ deftypes_cpcds_deque defines a deque type for commonly used types, such as char,
 defstruct_cpcds_deque(s)defines a deque type for struct s, with name s and type struct s.
 
 ## cpcds_unordered_map
+File: cpcds_unordered_map.h
+Use define_cpcds_um(n,k,v,efunc,hfunc) to initialize an unordered map type that maps from type k to type v with extention name n, using efunc as the equals function and hfunc as the hash function, note efunc and hfunc shall be function names not pointers to functions, full name will be cpcds_um_n.
+Can also use cpcds_um_define(t) to initialize an unordered map type that maps from type k to v with extention name of k__v.
+
+cpcds_unordered_map is implemented as a hash table using deque for resolving collisions.
+#### define_cpcds_umk(n,k,v,efunc,hfunc), cpcds_umk_define(k,v,efunc,hfunc)
+Defines structure of unordered map, as well as find, get, and insert functions.
+#### define_cpcds_uiter(n,k,v), cpcds_uiter_define(k,v)
+Defines structure of unordered map iterator, and functions that go along with it.
+
+All instances of param um is a pointer to an unordered map unless specified.
+### Structures
+struct cpcds_um_n (aka cpcds_um_n)
+
+struct cpcds_umiter_n (aka cpcds_umiter_n)
+### Constructors
+#### cpcds_mk_um_room_n(rm)
+Param rm is the bucket size of the unordered map.
+
+Makes an unordered map with a certain number of buckets.
+#### cpcds_mk_um_empty_n()
+Makes an empty unordered map with default bucket size.
+#### cpcds_mk_um_copy_n(um)
+Makes a copy of an unordered map.
+### Functions
+#### cpcds_um_get_n(um,k)
+Param k is the key to get the value for.
+
+Gets a value mapped to by a key.
+#### cpcds_um_insert_n(um,key,val)
+Params key and val are the key and value to insert into the map.
+
+Inserts a key-value pair into the map.
+#### cpcds_um_fnd_key_n(um,key)
+Param key is the key to look for.
+
+Finds a key in an unordered map, true is returned if the key is present.
+#### cpcds_um_iter_next_n(it)
+Param it is a pointer to an unordered map iterator, more specifically struct cpcds_umiter_n.
+
+Moves the iterator to the next value.
+#### cpcds_um_iter_get_n(it)
+Param it is an unordered map iterator, more specifically struct cpcds_umiter_n.
+
+Gets the key value pair currently pointed to by the iterator, return type is struct cpcds_kvpair_n, key and val are fields in that struct.
+#### cpcds_um_iter_equal_n(f,s)
+Params f and s are two unordered map iterators.
+
+Compares if the two iterators point to the same object, returns true if they do.
+#### cpcds_um_iter_begin_n(um)
+Gets an iterator to the beginning of the unordered map.
+#### cpcds_um_iter_end_n(um)
+Gets an iterator to the end of the unordered map.
+### Macros
+__CPCDS_DEFAULT_UMR is the default bucket size of the unordered map.
