@@ -539,5 +539,11 @@ Compares if the two iterators point to the same object, returns true if they do.
 Gets an iterator to the beginning of the unordered map.
 #### cpcds_um_iter_end_n(um)
 Gets an iterator to the end of the unordered map.
+#### cpcds_um_to_str_ptr_n(um)
+Makes string representation of the contents of an unordered map.
+#### cpcds_um_to_str_n(um)
+Param um is an unordered map.
+
+Makes string representation of the contents of an unordered map.
 ### Macros
 __CPCDS_DEFAULT_UMR is the default bucket size of the unordered map.
