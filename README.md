@@ -382,6 +382,8 @@ Pops an element off of the beginning of the list and returns it.
 Gets the value at the beginning of the list.
 #### cpcds_list_get_tail_n(lis)
 Gets the value at the end of the list.
+#### cpcds_list_clear_n(lis)
+Clears a list of all its contents.
 #### cpcds_list_append_list_n(lis,tba)
 Param tba is the list to be appended.
 
