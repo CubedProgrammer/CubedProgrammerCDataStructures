@@ -527,6 +527,10 @@ Inserts a key-value pair into the map.
 Param key is the key to look for.
 
 Finds a key in an unordered map, true is returned if the key is present.
+#### cpcds_um_erase_key_n(um,key)
+Param key is the key to erase.
+
+Erases a key value pair in the map by its key.
 #### cpcds_um_clear_n(um)
 Clears an unordered map of all of its contents.
 #### cpcds_um_destr_n(um)
