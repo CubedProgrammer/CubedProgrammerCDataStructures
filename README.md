@@ -195,6 +195,10 @@ Param index is an index.
 Param val is the value to change to.
 
 Changes the value of the vector at some index.
+#### cpcds_vec_destr_n(um)
+Param vec is a pointer to a vector.
+
+Destroys a vector pointer.
 #### cpcds_vec_fill_range_n(vec,v,index,len)
 Param vec is a pointer to a vector.
 
@@ -523,6 +527,10 @@ Inserts a key-value pair into the map.
 Param key is the key to look for.
 
 Finds a key in an unordered map, true is returned if the key is present.
+#### cpcds_um_clear_n(um)
+Clears an unordered map of all of its contents.
+#### cpcds_um_destr_n(um)
+Destroys an unordered map and frees the memory used by it.
 #### cpcds_um_iter_next_n(it)
 Param it is a pointer to an unordered map iterator, more specifically struct cpcds_umiter_n.
 
