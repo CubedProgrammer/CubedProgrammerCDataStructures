@@ -10,7 +10,7 @@ cppstring ull_to_cppstr(unsigned long long ull)
 		tmp=mk_char_str((char)(ull%10+48));
 		ull/=10;
 		str_combine(&ans,&tmp);
-		destroy(tmp);
+		cpcds_destr_str(tmp);
 	}
 	str_reverse_order(&ans);
 	if(ans.len==0)
@@ -28,7 +28,7 @@ cppstring ll_to_cppstr(long long ll)
 		ans=mk_from_cstr("-");
 		tmp=ull_to_cppstr(ll*-1);
 		str_combine(&ans,&tmp);
-		destroy(tmp);
+		cpcds_destr_str(tmp);
 	}
 	else
 	{
