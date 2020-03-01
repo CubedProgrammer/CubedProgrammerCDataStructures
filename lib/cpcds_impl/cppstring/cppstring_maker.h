@@ -1,7 +1,7 @@
 #ifndef __cplusplus
 #ifndef INCLUDED_CPPSTRING_MAKER_H
 #define INCLUDED_CPPSTRING_MAKER_H
-#define destroy(str)free(str.bytes)
+#define cpcds_destr_str(str)free(str.bytes)
 #ifndef NULL
 #define NULL (void*)0
 #endif
