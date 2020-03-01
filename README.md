@@ -478,13 +478,17 @@ Prepend an element to the front of the deque.
 Pops an element off of the front of the deque, and returns it.
 #### cpcds_deque_pop_back_n(dq)
 Pops an element off of the back of the deque, and returns it.
+#### cpcds_stack_top_n(dq)
+Gets the element at the top of the stack.
+#### cpcds_queue_front_n(dq)
+Gets the element at the front of the queue.
 #### cpcds_deque_push_n(dq,v)
 Param v is the value to push.
 
 Pushes an element onto this stack or queue.
-#### cpcds_deque_pop_n(dq)
+#### cpcds_stack_pop_n(dq)
 Pops an element off of the stack.
-#### cpcds_deque_poll_n(dq)
+#### cpcds_queue_poll_n(dq)
 Polls an element off of the queue.
 ### Macros
 deftypes_cpcds_deque defines a deque type for commonly used types, such as char, int, long, double, and cppstring.
