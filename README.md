@@ -227,7 +227,7 @@ Param vec is a pointer to a vector.
 Param val is the value to append to the vector.
 
 Appends a value to the end of a vector.
-#### cpcds_vector_pop_end_n(vec)
+#### cpcds_vec_pop_end_n(vec)
 Param vec is a pointer to a vector.
 
 Pops an item off of the back of a vector, and returns it.
