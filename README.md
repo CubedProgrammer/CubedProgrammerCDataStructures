@@ -1,5 +1,9 @@
 # CubedProgrammerCDataStructures
 C Data Structures Libraries
+
+There are two branches in this repository, master and experimental, master branch contains code that is meant to be safe and bug-free, apologies in advance if there is a bug in master, experimental contains code that is being developed and may not be safe to use, use at your own risk.
+
+You are welcome to fork this repository and make pull requests, but don't put ugly backslashes in macros in pull requests.
 ## cppstring
 File: cppstring.h
 ### Structures
@@ -565,3 +569,108 @@ Param um is an unordered map.
 Makes string representation of the contents of an unordered map.
 ### Macros
 __CPCDS_DEFAULT_UMR is the default bucket size of the unordered map.
+## cpcds_map
+File: cpcds_map.h
+
+Use define_cpcds_map(n,k,v,compar) to initialize a map type that maps from type k to type v with extention name n, using compar as the comparing function, note compar shall be a function name not a pointer to function, full name will be cpcds_map_n.
+
+Can also use cpcds_map_define(t) to initialize a map type that maps from type k to v with extention name of k__v, however, map deallocate function is only in main header.
+#### define_cpcds_mmk(n,k,v,compar), cpcds_mmk_define(k,v,compar)
+Defines structure of map, as well as needed functions for maintaining balance.
+#### define_cpcds_mins(n,k,v,compar), cpcds_mins_define(k,v,compar)
+Defines functions for inserting and erasing elements.
+#### define_cpcds_miter(n,k,v), cpcds_miter_define(k,v)
+Defines iterator structure and functions to help iterate through map.
+
+All mp parameters are pointers to a map, unless stated otherwise.
+
+Maps are implemented as binary search trees.
+### Structures
+struct cpcds_map_n (aka cpcds_map_n)
+
+struct cpcds_miter_n (aka cpcds_miter_n)
+### Constructors
+#### cpcds_mk_map_empty_n()
+Makes an empty map.
+### Functions
+#### cpcds_map_ins_n(mp,k,v)
+Params k and v are key value pairs to insert into the map.
+
+Inserts a key value pair into the map.
+#### cpcds_map_erase_n(mp,k)
+Param k is the key assosiated with the key value pair to erase.
+
+Erase a key value pair by its key from the map.
+#### cpcds_map_get_n(mp,k)
+Param k is the key to find.
+
+Gets the value assosiated with the key.
+#### cpcds_map_fnd_n(mp,k)
+Param k is the key to look for.
+
+Returns true if the key is found.
+#### cpcds_map_iter_begin_n(mp)
+Gets an iterator to the beginning of the map.
+#### cpcds_map_iter_end_n(mp)
+Gets an iterator to the end of the map.
+#### cpcds_map_iter_equal_n(itx,ity)
+Params itx and ity are two iterators.
+
+Compares if two iterators are pointing to the same item.
+#### cpcds_map_iter_next_n(it)
+Param it is a pointer to an iterator.
+
+Moves the iterator to the next value.
+#### cpcds_map_iter_get_n(it)
+Param it is a pointer to an iterator.
+
+Gets the key value pair pointed to by the iterator.
+### Macros
+There are no useful macros for the user to use.
+## cpcds_priority_queue
+File: cpcds_priority_queue.h
+Use define_cpcds_pq(n,t,compar) to define a priority queue type that stores type t with name extension n, compar is the function for comparing items, full name will be cpcds_pq_n.
+
+Can also use cpcds_pq_define(t,compar) to define a priority queue type that stores type t with name extension t
+
+The priority queue will have the top element that is considered to go first by compar.
+
+Will also need to define a vector type struct cpcds_vector_n.
+
+#### define_cpcds_pqmk(n,t,compar), cpcds_pqmk_define(t,compar)
+Defines the structure of the queue and some needed functions.
+#### define_cpcds_pqpush(n,t,compar), cpcds_pqpush_define(t,compar)
+Defines functions for pushing and popping on and off the queue.
+
+All pq parameters are pointers to a priority queue, unless stated otherwise.
+
+Priority queues are implemented as binary heaps.
+### Structures
+struct cpcds_pq_n (aka cpcds_pq_n)
+### Constructors
+#### cpcds_mk_pq_empty_n()
+Constructs an empty priority queue.
+#### cpcds_mk_pq_array_n(first,last)
+Params first and last are iterators to the beginning and end of an array.
+
+Constructs a priority queue from an array.
+#### cpcds_mk_pq_copy_n(pq)
+Creates a copy of a priority queue.
+### Functions
+#### cpcds_pq_empty_n(pq)
+Checks if a priority queue is empty.
+#### cpcds_pq_top_n(pq)
+Gets the top element of the priority queue.
+#### cpcds_pq_destr_n(pq)
+Destroys a priority queue.
+#### cpcds_pq_push_n(pq,v)
+Param v is an item to push onto the queue.
+
+Pushes an item onto a priority queue.
+#### cpcds_pq_pop_n(pq)
+Pops an item off of the priority queue.
+### Macros
+#### deftypes_cpcds_pq
+Defines priority queues for commonly used types using default comparing functions, cppstring is not included in here.
+#### defstruct_cpcds_pq(s)
+Defines a priority queue type with name extension s and type struct s.
