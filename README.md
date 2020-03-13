@@ -140,7 +140,7 @@ Param str is a char pointer.
 
 Copies the contents of s into str.
 ### Macros
-#### destroy(str)
+#### cpcds_destr_str(str)
 Destroys the string, frees memory associated with it.
 
 Param str is the string to destroy.
