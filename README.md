@@ -625,6 +625,8 @@ Moves the iterator to the next value.
 Param it is a pointer to an iterator.
 
 Gets the key value pair pointed to by the iterator.
+#### cpcds_map_clear_n(mp)
+Clears the contents of a map.
 ### Macros
 There are no useful macros for the user to use.
 ## cpcds_priority_queue
@@ -674,3 +676,127 @@ Pops an item off of the priority queue.
 Defines priority queues for commonly used types using default comparing functions, cppstring is not included in here.
 #### defstruct_cpcds_pq(s)
 Defines a priority queue type with name extension s and type struct s.
+## cpcds_unordered_set
+File: cpcds_unordered_set.h
+
+Use define_cpcds_us(n,t) to define an unordered set type that stores type t with name extension n, full name will be cpcds_us_n.
+
+Can also use cpcds_us_define(t) to define an unordered set type that stores type t with name extension t
+
+Will also need to define an unordered map type struct cpcds_um_n__vptr that maps from t to void pointer.
+#### define_cpcds_usmk(n,t), cpcds_usmk_define(t)
+Defines structure and basic functions for an unordered set.
+#### define_cpcds_usiter(n,t), cpcds_usiter_define(t)
+Defines an iterator type for unordered set.
+
+All us parameters are pointers to an unordered set, unless specified.
+
+Unordered sets are implemented as hash tables.
+### Structure
+struct cpcds_us_n (aka cpcds_us_n)
+
+struct cpcds_usiter_n (aka cpcds_usiter_n)
+### Constructors
+#### cpcds_mk_us_empty_n()
+Makes an empty unordered set.
+#### cpcds_mk_us_copy_n(us)
+Makes a copy of an existing unordered set.
+### Functions
+#### cpcds_us_insert_n(us,val)
+Param val is the value that should be inserted.
+
+Inserts an item into the set.
+#### cpcds_us_erase_n(us,val)
+Param val is the value that should be erased.
+
+Erases an item from the set.
+#### cpcds_us_fnd_n(us,val)
+Param val is the item to look for.
+
+Looks for an item in the set, true is returned if it is found.
+#### cpcds_us_clear_n(us)
+Clears the contents of the unordered set.
+#### cpcds_us_destr_n(us)
+Destroys an unordered set.
+#### cpcds_us_iter_begin_n(us)
+Gets an iterator to the beginning of the unordered set.
+#### cpcds_us_iter_end_n(us)
+Gets an iterator to the end of the unordered set.
+#### cpcds_us_iter_equal_n(x,y)
+Params x and y are two unordered set iterators.
+
+Compares if the two iterators are equal, true is returned if they are.
+#### cpcds_us_iter_get_n(it)
+Param it is a pointer to an unordered set iterator.
+
+Gets the item pointed to by the iterator.
+#### cpcds_us_iter_next_n(it)
+Param it is a pointer to an unordered set iterator.
+
+Moves the iterator to its next value.
+### Macros
+#### deftypes_cpcds_us
+Defines unordered sets for commonly used types, but not cppstring.
+#### defstruct_cpcds_us(s)
+Defines an unordered set that stores struct s with name extension s.
+## cpcds_set
+File: cpcds_set.h
+
+Use define_cpcds_set(n,t) to define a set type that stores type t with name extension n, full name will be cpcds_set_n.
+
+Can also use cpcds_set_define(t) to define an set type that stores type t with name extension t
+
+Will also need to define a map type struct cpcds_um_n__vptr that maps from t to void pointer.
+#### define_cpcds_smk(n,t), cpcds_smk_define(t)
+Defines structure and basic functions for a set.
+#### define_cpcds_siter(n,t), cpcds_siter_define(t)
+Defines an iterator type for set.
+
+All set parameters are pointers to a set, unless specified.
+
+Sets are implemented as binary search trees.
+### Structure
+struct cpcds_set_n (aka cpcds_set_n)
+
+struct cpcds_siter_n (aka cpcds_siter_n)
+### Constructors
+#### cpcds_mk_set_empty_n()
+Makes an empty set.
+### Functions
+#### cpcds_set_ins_n(set,val)
+Param val is the value that should be inserted.
+
+Inserts an item into the set.
+#### cpcds_set_erase_n(set,val)
+Param val is the value that should be erased.
+
+Erases an item from the set.
+#### cpcds_set_fnd_n(set,val)
+Param val is the item to look for.
+
+Looks for an item in the set, true is returned if it is found.
+#### cpcds_set_clear_n(set)
+Clears the contents of the set.
+#### cpcds_set_destr_n(set)
+Destroys a set.
+#### cpcds_set_iter_begin_n(set)
+Gets an iterator to the beginning of the set.
+#### cpcds_set_iter_end_n(set)
+Gets an iterator to the end of the set.
+#### cpcds_set_iter_equal_n(x,y)
+Params x and y are two set iterators.
+
+Compares if the two iterators are equal, true is returned if they are.
+#### cpcds_set_iter_get_n(it)
+Param it is a pointer to a set iterator.
+
+Gets the item pointed to by the iterator.
+#### cpcds_set_iter_next_n(it)
+Param it is a pointer to a set iterator.
+
+Moves the iterator to its next value.
+### Macros
+#### deftypes_cpcds_set
+Defines sets for commonly used types, but not cppstring.
+#### defstruct_cpcds_set(s)
+Defines a set that stores struct s with name extension s.
