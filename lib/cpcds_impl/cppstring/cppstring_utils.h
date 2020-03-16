@@ -2,9 +2,9 @@
 #ifndef INCLUDED_CPPSTRING_UTILS_H
 #define INCLUDED_CPPSTRING_UTILS_H
 #include<stdbool.h>
-#define cpcds_print_cppstr(f,s)fprintf(f,s.bytes)
-#define cpcds_stdprint_cppstr(s)printf(s.bytes)
-int strindex_both_bounds(cppstring*s,char c,size_t from,size_t to)
+#define cpcds_print_cppstr(f,s)fprintf(f,(s).bytes)
+#define cpcds_stdprint_cppstr(s)printf((s).bytes)
+int strindex_both_bounds(const cppstring*s,const char c,const size_t from,const size_t to)
 {
 	int index=-1;
 	for(size_t i=from;i<to;i++)
@@ -17,15 +17,15 @@ int strindex_both_bounds(cppstring*s,char c,size_t from,size_t to)
 	}
 	return index;
 }
-int strindex_lower_bound(cppstring*s,char c,int from)
+int strindex_lower_bound(const cppstring*s,const char c,const int from)
 {
 	return strindex_both_bounds(s,c,from,s->len);
 }
-int strindex_no_bound(cppstring*s,char c)
+int strindex_no_bound(const cppstring*s,const char c)
 {
 	return strindex_lower_bound(s,c,0);
 }
-bool str_equal_pointer(cppstring*s,cppstring*t)
+bool str_equal_pointer(const cppstring*s,const cppstring*t)
 {
 	if(s->len==t->len)
 	{
@@ -41,7 +41,7 @@ bool str_equal_pointer(cppstring*s,cppstring*t)
 		return false;
 	}
 }
-bool str_equal_values(cppstring s,cppstring t)
+bool str_equal_values(const cppstring s,const cppstring t)
 {
 	return str_equal_pointer(&s,&t);
 }
@@ -75,7 +75,7 @@ cppstring str_to_lower(cppstring s)
 	}
 	return s;
 }
-cppstring str_replace_char(cppstring*s,char old,char new)
+cppstring str_replace_char(cppstring*s,const char old,const char new)
 {
 	for(size_t i=0;i<s->len;i++)
 	{
@@ -86,7 +86,7 @@ cppstring str_replace_char(cppstring*s,char old,char new)
 	}
 	return*s;
 }
-char*cstr(cppstring*s)
+char*cstr(const cppstring*s)
 {
 	return s->bytes;
 }

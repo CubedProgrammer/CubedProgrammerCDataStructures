@@ -1,6 +1,9 @@
 #ifndef __cplusplus
 #ifndef INCLUDED_HASH_FUNC_H
 #define INCLUDED_HASH_FUNC_H
+#define P_CONST_A 375651977
+#define P_CONST_B 149753843
+#define P_CONST_C 987662329
 typedef unsigned long long int cpcds_hash_v;
 cpcds_hash_v cpcds_hash_char(char c)
 {
@@ -16,7 +19,7 @@ cpcds_hash_v cpcds_hash_int(int i)
 }
 cpcds_hash_v cpcds_hash_long(long l)
 {
-	return(cpcds_hash_v)l;
+	return l;
 }
 cpcds_hash_v cpcds_hash_float(float f)
 {
@@ -25,8 +28,8 @@ cpcds_hash_v cpcds_hash_float(float f)
 }
 cpcds_hash_v cpcds_hash_double(double d)
 {
-	long*ptr=(long*)&d;
-	return cpcds_hash_long(*ptr);
+	cpcds_hash_v*ptr=(cpcds_hash_v*)&d;
+	return*ptr;
 }
 cpcds_hash_v cpcds_hash_uc(unsigned char c)
 {
@@ -42,7 +45,7 @@ cpcds_hash_v cpcds_hash_ui(unsigned int i)
 }
 cpcds_hash_v cpcds_hash_ul(unsigned long l)
 {
-	return(cpcds_hash_v)l;
+	return l;
 }
 cpcds_hash_v cpcds_hash_ll(long long ll)
 {
@@ -50,7 +53,7 @@ cpcds_hash_v cpcds_hash_ll(long long ll)
 }
 cpcds_hash_v cpcds_hash_ull(unsigned long long ll)
 {
-	return(cpcds_hash_v)ll;
+	return ll;
 }
 #endif
 #endif

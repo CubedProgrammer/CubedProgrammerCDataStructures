@@ -64,6 +64,17 @@ cppstring short_to_cppstr(short s)
 {
 	return int_to_cppstr(s);
 }
+cppstring bool_to_cppstr(bool u)
+{
+	if(u)
+	{
+		return mk_from_cstr("true");
+	}
+	else
+	{
+		return mk_from_cstr("false");
+	}
+}
 cppstring cppstr_to_cppstr(cppstring s)
 {
 	return s;
