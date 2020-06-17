@@ -3,6 +3,8 @@ C Data Structures Libraries
 
 There are two branches in this repository, master and experimental, master branch contains code that is meant to be safe and bug-free, apologies in advance if there is a bug in master, experimental contains code that is being developed and may not be safe to use, use at your own risk.
 
+## WARNING: There are many bugs in the master branch right now!
+
 You are welcome to fork this repository and make pull requests, but don't put ugly backslashes in macros in pull requests.
 ## cppstring
 File: cppstring.h
