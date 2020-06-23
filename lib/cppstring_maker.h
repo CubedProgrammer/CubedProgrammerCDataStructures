@@ -4,7 +4,7 @@
 struct cppstring;
 typedef struct cppstring cppstring;
 #define cpcds_destr_str(str)free(str.bytes)
-cppstring mk_empty_str();
+cppstring mk_empty_str(void);
 cppstring mk_char_str(const char);
 cppstring mk_array_str(const char*,const size_t);
 cppstring mk_from_cstr(const char);

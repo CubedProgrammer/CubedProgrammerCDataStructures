@@ -11,7 +11,7 @@ struct cppstring
 	size_t len;
 };
 typedef struct cppstring cppstring;
-cppstring mk_empty_str()
+cppstring mk_empty_str(void)
 {
 	cppstring str;
 	str.bytes=NULL;
