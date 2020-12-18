@@ -4,6 +4,8 @@
 #include<stdbool.h>
 #define cpcds_print_cppstr(f,s)fprintf(f,(s).bytes)
 #define cpcds_stdprint_cppstr(s)printf((s).bytes)
+#define cpcds_println_cppstr(f,s)fputs((s).bytes,f)
+#define cpcds_stdprintln_cppstr(s)puts((s).bytes)
 int strindex_both_bounds(const cppstring*s,const char c,const size_t from,const size_t to)
 {
 	int index=-1;
