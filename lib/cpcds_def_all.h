@@ -35,9 +35,9 @@
 #include"cpcds_unordered_map.h"
 #include"cpcds_unordered_set.h"
 #include"cpcds_vector.h"
-#define NEW(x,y){x=(y*)malloc(sizeof(y));}
-#define NEWARRAY(x,y,size){x=(y*)malloc(sizeof(y)*size);}
-#define cpcds_mk_ptr(t,v,p){p=(t*)malloc(sizeof(t));*p=v;}
+#define CPCDS____NEW(x,y)x=(y*)malloc(sizeof(y))
+#define CPCDS____NEWARRAY(x,y,size)x=(y*)malloc(sizeof(y)*size)
+#define cpcds_mk_ptr(t,v,p)do{p=(t*)malloc(sizeof(t));*p=v;}while(0)
 deftypes_cpcds_deque
 deftypes_cpcds_list
 deftypes_cpcds_set
