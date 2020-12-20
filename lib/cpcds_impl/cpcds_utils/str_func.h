@@ -1,13 +1,13 @@
 #ifndef __cplusplus
 #ifndef INCLUDED_STR_FUNC_H
 #define INCLUDED_STR_FUNC_H
-inline cppstring ull_to_cppstr(unsigned long long ull)
+cppstring ull_to_cppstr(unsigned long long ull)
 {
 	cppstring ans=mk_empty_str();
 	cppstring tmp;
 	while(ull>0)
 	{
-		tmp=mk_char_str((char)(ull%10+48));
+		tmp=mk_char_str((char)(ull%10+'0'));
 		ull/=10;
 		str_combine(&ans,&tmp);
 		cpcds_destr_str(tmp);
@@ -19,7 +19,7 @@ inline cppstring ull_to_cppstr(unsigned long long ull)
 	}
 	return ans;
 }
-inline cppstring ll_to_cppstr(long long ll)
+cppstring ll_to_cppstr(long long ll)
 {
 	cppstring ans;
 	cppstring tmp;
@@ -40,38 +40,38 @@ inline cppstring ll_to_cppstr(long long ll)
 	}
 	return ans;
 }
-inline cppstring ul_to_cppstr(unsigned long ul)
+cppstring ul_to_cppstr(unsigned long ul)
 {
 	return ull_to_cppstr(ul);
 }
-inline cppstring long_to_cppstr(long l)
+cppstring long_to_cppstr(long l)
 {
 	return ll_to_cppstr(l);
 }
-inline cppstring ui_to_cppstr(unsigned int ui)
+cppstring ui_to_cppstr(unsigned ui)
 {
 	return ull_to_cppstr(ui);
 }
-inline cppstring int_to_cppstr(int i)
+cppstring int_to_cppstr(int i)
 {
 	return ll_to_cppstr(i);
 }
-inline cppstring us_to_cppstr(unsigned short us)
+cppstring us_to_cppstr(unsigned short us)
 {
 	return ui_to_cppstr(us);
 }
-inline cppstring short_to_cppstr(short s)
+cppstring short_to_cppstr(short s)
 {
 	return int_to_cppstr(s);
 }
-inline cppstring bool_to_cppstr(bool u)
+cppstring bool_to_cppstr(bool u)
 {
 	if(u)
 		return mk_from_cstr("true");
 	else
 		return mk_from_cstr("false");
 }
-inline cppstring cppstr_to_cppstr(cppstring s)
+cppstring cppstr_to_cppstr(cppstring s)
 {
 	return s;
 }

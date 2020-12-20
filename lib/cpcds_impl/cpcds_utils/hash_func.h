@@ -5,53 +5,53 @@
 #define P_CONST_B 149753843
 #define P_CONST_C 987662329
 typedef unsigned long long int cpcds_hash_v;
-inline cpcds_hash_v cpcds_hash_char(char c)
+cpcds_hash_v cpcds_hash_char(char c)
 {
 	return c;
 }
-inline cpcds_hash_v cpcds_hash_short(short s)
+cpcds_hash_v cpcds_hash_short(short s)
 {
 	return s;
 }
-inline cpcds_hash_v cpcds_hash_int(int i)
+cpcds_hash_v cpcds_hash_int(int i)
 {
 	return i;
 }
-inline cpcds_hash_v cpcds_hash_long(long l)
+cpcds_hash_v cpcds_hash_long(long l)
 {
 	return l;
 }
-inline cpcds_hash_v cpcds_hash_float(float f)
+cpcds_hash_v cpcds_hash_float(float f)
 {
 	cpcds_hash_v*ptr=(cpcds_hash_v*)&f;
 	return*ptr;
 }
-inline cpcds_hash_v cpcds_hash_double(double d)
+cpcds_hash_v cpcds_hash_double(double d)
 {
 	cpcds_hash_v*ptr=(cpcds_hash_v*)&d;
 	return*ptr;
 }
-inline cpcds_hash_v cpcds_hash_uc(unsigned char c)
+cpcds_hash_v cpcds_hash_uc(unsigned char c)
 {
 	return c;
 }
-inline cpcds_hash_v cpcds_hash_us(unsigned short s)
+cpcds_hash_v cpcds_hash_us(unsigned short s)
 {
 	return s;
 }
-inline cpcds_hash_v cpcds_hash_ui(unsigned int i)
+cpcds_hash_v cpcds_hash_ui(unsigned i)
 {
 	return i;
 }
-inline cpcds_hash_v cpcds_hash_ul(unsigned long l)
+cpcds_hash_v cpcds_hash_ul(unsigned long l)
 {
 	return l;
 }
-inline cpcds_hash_v cpcds_hash_ll(long long ll)
+cpcds_hash_v cpcds_hash_ll(long long ll)
 {
 	return(cpcds_hash_v)ll;
 }
-inline cpcds_hash_v cpcds_hash_ull(unsigned long long ll)
+cpcds_hash_v cpcds_hash_ull(unsigned long long ll)
 {
 	return ll;
 }
