@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_VECTOR_H
-#define INCLUDED_CPCDS_VECTOR_H
+#ifndef Included_cpcds_vector_h
+#define Included_cpcds_vector_h
 #include<stdbool.h>
 #include<stdlib.h>
 #include"cpcds_impl/cpcds_vector/cpcds_vector_maker.h"

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_COMP_FUNC_H
-#define INCLUDED_COMP_FUNC_H
+#ifndef Included_comp_func_h
+#define Included_comp_func_h
 #ifdef max
 #define cpcds____max(__x__,__y__)((__x__)<(__y__)?(__y__):(__x__))
 #else

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_DEF_ALL_H
-#define INCLUDED_CPCDS_DEF_ALL_H
+#ifndef Included_cpcds_def_all_h
+#define Included_cpcds_def_all_h
 #include<assert.h>
 #include<ctype.h>
 #include<errno.h>

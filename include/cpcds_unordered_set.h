@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_UNORDERED_SET_H
-#define INCLUDED_CPCDS_UNORDERED_SET_H
+#ifndef Included_cpcds_unordered_set_h
+#define Included_cpcds_unordered_set_h
 #include<stdbool.h>
 #include<stdlib.h>
 #include"cpcds_impl/cpcds_unordered_set/cpcds_unordered_set_maker.h"

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPPSTRING_H
-#define INCLUDED_CPPSTRING_H
+#ifndef Included_cppstring_h
+#define Included_cppstring_h
 #include<stdbool.h>
 #include<stdio.h>
 #include<stdlib.h>

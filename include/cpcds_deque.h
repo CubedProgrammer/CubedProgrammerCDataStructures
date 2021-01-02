@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_DEQUE_H
-#define INCLUDED_CPCDS_DEQUE_H
+#ifndef Included_cpcds_deque_h
+#define Included_cpcds_deque_h
 #include<stdbool.h>
 #include<stdlib.h>
 #include"cpcds_impl/cpcds_deque/cpcds_deque_maker.h"

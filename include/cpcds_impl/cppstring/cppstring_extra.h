@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPPSTRING_EXTRA_H
-#define INCLUDED_CPPSTRING_EXTRA_H
+#ifndef Included_cppstring_extra_h
+#define Included_cppstring_extra_h
 size_t str_count_ptr(const cppstring*sp,const char c)
 {
 	size_t cnt=0;

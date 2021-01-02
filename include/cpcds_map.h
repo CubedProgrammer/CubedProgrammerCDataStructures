@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_MAP_H
-#define INCLUDED_CPCDS_MAP_H
+#ifndef Included_cpcds_map_h
+#define Included_cpcds_map_h
 #include<stdbool.h>
 #include<stdlib.h>
 #include"cpcds_impl/cpcds_utils/comp_func.h"

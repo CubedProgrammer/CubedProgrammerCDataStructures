@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_EQUALS_FUNC_H
-#define INCLUDED_EQUALS_FUNC_H
+#ifndef Included_equals_func_h
+#define Included_equals_func_h
 #include<stdbool.h>
 bool cpcds_equals_char(char a,char b)
 {

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_STR_FUNC_H
-#define INCLUDED_STR_FUNC_H
+#ifndef Included_str_func_h
+#define Included_str_func_h
 cppstring ull_to_cppstr(unsigned long long ull)
 {
 	cppstring ans=mk_empty_str();

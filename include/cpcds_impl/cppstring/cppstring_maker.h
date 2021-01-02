@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPPSTRING_MAKER_H
-#define INCLUDED_CPPSTRING_MAKER_H
+#ifndef Included_cppstring_maker_h
+#define Included_cppstring_maker_h
 #define cpcds_destr_str(str)free(str.bytes)
 #ifndef NULL
 #define NULL (void*)0

@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_CPCDS_PRIORITY_QUEUE_H
-#define INCLUDED_CPCDS_PRIORITY_QUEUE_H
+#ifndef Included_cpcds_priority_queue_h
+#define Included_cpcds_priority_queue_h
 #include<stdlib.h>
 #include"cpcds_impl/cpcds_utils/comp_func.h"
 #include"cpcds_impl/cpcds_priority_queue/cpcds_priority_queue_maker.h"

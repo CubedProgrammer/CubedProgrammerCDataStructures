@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef Included_cpcds_cppstring_maker_h
-#define Included_cpcds_cppstring_maker_h
+#ifndef Included_cppstring_maker_h
+#define Included_cppstring_maker_h
 struct cppstring;
 typedef struct cppstring cppstring;
 #define cpcds_destr_str(str)free(str.bytes)

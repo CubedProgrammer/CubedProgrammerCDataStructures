@@ -1,6 +1,6 @@
 #ifndef __cplusplus
-#ifndef INCLUDED_HASH_FUNC_H
-#define INCLUDED_HASH_FUNC_H
+#ifndef Included_hash_func_h
+#define Included_hash_func_h
 #define P_CONST_A 375651977
 #define P_CONST_B 149753843
 #define P_CONST_C 987662329
