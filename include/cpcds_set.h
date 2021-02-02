@@ -1,4 +1,4 @@
-#ifndef __cplsetplset
+#ifndef __cplusplus
 #ifndef Included_cpcds_set_h
 #define Included_cpcds_set_h
 #include<stdbool.h>
