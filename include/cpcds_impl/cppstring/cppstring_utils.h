@@ -96,7 +96,7 @@ char*cstr_value(cppstring s)
 {
 	return s.bytes;
 }
-void cstr_fill_array(cppstring*s,char*str)
+void cstr_fill_array(const cppstring*s,char*str)
 {
 	for(size_t i=0;i<s->len;i++)
 	{
