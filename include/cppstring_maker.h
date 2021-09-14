@@ -1,7 +1,11 @@
 #ifndef __cplusplus
 #ifndef Included_cppstring_maker_h
 #define Included_cppstring_maker_h
-struct cppstring;
+struct cppstring
+{
+	char*bytes;
+	size_t len;
+};
 typedef struct cppstring cppstring;
 #define cpcds_destr_str(str)free(str.bytes)
 cppstring mk_empty_str(void);
