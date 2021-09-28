@@ -552,7 +552,7 @@ Param it is a pointer to an unordered map iterator, more specifically struct cpc
 
 Moves the iterator to the next value.
 #### cpcds_um_iter_get_n(it)
-Param it is an unordered map iterator, more specifically struct cpcds_umiter_n.
+Param it is a pointer to an unordered map iterator, more specifically struct cpcds_umiter_n.
 
 Gets the key value pair currently pointed to by the iterator, return type is struct cpcds_kvpair_n, key and val are fields in that struct.
 #### cpcds_um_iter_equal_n(f,s)
