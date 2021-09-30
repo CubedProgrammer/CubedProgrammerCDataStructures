@@ -10,6 +10,7 @@ int strindex_both_bounds(const cppstring*,const char,const size_t,const size_t);
 int strindex_lower_bound(const cppstring*,const char,const int);
 int strindex_no_bound(const cppstring*,const char);
 bool str_equal_pointer(const cppstring*,const cppstring*);
+bool str_equal_values(const cppstring s,const cppstring t);
 cppstring str_reverse_order(cppstring*);
 cppstring str_to_upper(cppstring);
 cppstring str_to_lower(cppstring);
