@@ -32,7 +32,7 @@ cppstring mk_array_str(const char*s,const size_t len)
 	cppstring str;
 	str.bytes=(char*)malloc((len+1)*sizeof(char));
 	str.len=len;
-	for(size_t i=0;i<len;str.bytes[i]=s[i],i++);
+	memcpy(str.bytes,s,len);
 	str.bytes[str.len]=0;
 	return str;
 }

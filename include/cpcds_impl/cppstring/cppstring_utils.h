@@ -2,6 +2,7 @@
 #ifndef Included_cppstring_utils_h
 #define Included_cppstring_utils_h
 #include<stdbool.h>
+#include<string.h>
 #define cpcds_print_cppstr(f,s)fprintf(f,"%s",(s).bytes)
 #define cpcds_stdprint_cppstr(s)printf("%s",(s).bytes)
 #define cpcds_println_cppstr(f,s)fputs((s).bytes,f)
@@ -59,7 +60,7 @@ cppstring str_to_upper(cppstring s)
 {
 	for(size_t i=0;i<s.len;i++)
 	{
-		if(s.bytes[i]>96||s.bytes[i]<=122)
+		if(s.bytes[i]>96&&s.bytes[i]<=122)
 		{
 			s.bytes[i]-=32;
 		}
@@ -70,7 +71,7 @@ cppstring str_to_lower(cppstring s)
 {
 	for(size_t i=0;i<s.len;i++)
 	{
-		if(s.bytes[i]>64||s.bytes[i]<=90)
+		if(s.bytes[i]>64&&s.bytes[i]<=90)
 		{
 			s.bytes[i]+=32;
 		}
@@ -98,11 +99,7 @@ char*cstr_value(cppstring s)
 }
 void cstr_fill_array(const cppstring*s,char*str)
 {
-	for(size_t i=0;i<s->len;i++)
-	{
-		str[i]=str_char_at(s,i);
-	}
-	str[s->len]=0;
+	memcpy(str,s->bytes,s->len);
 }
 #endif
 #endif
