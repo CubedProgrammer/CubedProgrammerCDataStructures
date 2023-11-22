@@ -7,9 +7,9 @@
 #define cpcds_stdprint_cppstr(s)printf("%s",(s).bytes)
 #define cpcds_println_cppstr(f,s)fputs((s).bytes,f)
 #define cpcds_stdprintln_cppstr(s)puts((s).bytes)
-int strindex_both_bounds(const cppstring*s,const char c,const size_t from,const size_t to)
+size_t strindex_both_bounds(const cppstring*s,char c,size_t from,size_t to)
 {
-	int index=-1;
+	size_t index=-1;
 	for(size_t i=from;i<to;i++)
 	{
 		if(str_char_at(s,i)==c)
@@ -20,11 +20,11 @@ int strindex_both_bounds(const cppstring*s,const char c,const size_t from,const 
 	}
 	return index;
 }
-int strindex_lower_bound(const cppstring*s,const char c,const int from)
+size_t strindex_lower_bound(const cppstring*s,char c,int from)
 {
 	return strindex_both_bounds(s,c,from,s->len);
 }
-int strindex_no_bound(const cppstring*s,const char c)
+size_t strindex_no_bound(const cppstring*s,char c)
 {
 	return strindex_lower_bound(s,c,0);
 }
@@ -44,7 +44,7 @@ bool str_equal_pointer(const cppstring*s,const cppstring*t)
 		return false;
 	}
 }
-bool str_equal_values(const cppstring s,const cppstring t)
+bool str_equal_values(cppstring s,cppstring t)
 {
 	return str_equal_pointer(&s,&t);
 }

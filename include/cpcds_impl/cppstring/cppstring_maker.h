@@ -18,7 +18,7 @@ cppstring mk_empty_str(void)
 	str.len=0;
 	return str;
 }
-cppstring mk_char_str(const char c)
+cppstring mk_char_str(char c)
 {
 	cppstring str;
 	str.bytes=malloc(2*sizeof(char));
@@ -27,7 +27,7 @@ cppstring mk_char_str(const char c)
 	str.len=1;
 	return str;
 }
-cppstring mk_array_str(const char*s,const size_t len)
+cppstring mk_array_str(const char*s,size_t len)
 {
 	cppstring str;
 	str.bytes=(char*)malloc((len+1)*sizeof(char));
@@ -40,20 +40,20 @@ cppstring mk_from_cstr(const char*s)
 {
 	return mk_array_str(s,strlen(s));
 }
-cppstring cpycppstr(const cppstring s)
+cppstring cpycppstr(cppstring s)
 {
 	return mk_array_str(s.bytes,s.len);
 }
-char str_char_at(const cppstring*s,const size_t index)
+char str_char_at(const cppstring*s,size_t index)
 {
 	return s->bytes[index%s->len];
 }
-cppstring str_modify_char(cppstring*s,const size_t index,const char c)
+cppstring str_modify_char(cppstring*s,size_t index,char c)
 {
 	s->bytes[index%s->len]=c;
 	return*s;
 }
-cppstring str_swap_char(cppstring*s,const size_t a,const size_t b)
+cppstring str_swap_char(cppstring*s,size_t a,size_t b)
 {
 	s->bytes[a%s->len]+=s->bytes[b%s->len];
 	s->bytes[b%s->len]=s->bytes[a%s->len]-s->bytes[b%s->len];
@@ -94,11 +94,11 @@ void str_combine(cppstring*s,const cppstring*t)
 	s->bytes=cm;
 	s->len+=t->len;
 }
-cppstring str_concat(const cppstring s,const cppstring t)
+cppstring str_concat(cppstring s,cppstring t)
 {
 	return str_concat_pointer(&s,&t);
 }
-cppstring substring(const cppstring*s,const size_t index,const size_t len)
+cppstring substring(const cppstring*s,size_t index,size_t len)
 {
 	char*b=(char*)malloc((len+1)*sizeof(char));
 	b[len]=0;

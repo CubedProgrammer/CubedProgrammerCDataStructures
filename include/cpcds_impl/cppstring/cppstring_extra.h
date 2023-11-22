@@ -1,7 +1,7 @@
 #ifndef __cplusplus
 #ifndef Included_cppstring_extra_h
 #define Included_cppstring_extra_h
-size_t str_count_ptr(const cppstring*sp,const char c)
+size_t str_count_ptr(const cppstring*sp,char c)
 {
 	size_t cnt=0;
 	for(char*it=sp->bytes;it!=sp->bytes+sp->len;++it)
@@ -13,7 +13,7 @@ size_t str_count_ptr(const cppstring*sp,const char c)
 	}
 	return cnt;
 }
-size_t str_split(const cppstring str,cppstring**arr,const char*cs)
+size_t str_split(cppstring str,cppstring**arr,const char*cs)
 {
 	size_t cnt=0;
 	for(char*it=str.bytes;it!=str.bytes+str.len;++it)
@@ -44,12 +44,13 @@ size_t str_split(const cppstring str,cppstring**arr,const char*cs)
 	*ss=substring(&str,l,str.len-l);
 	return cnt;
 }
-bool str_is_palindrome(const cppstring str)
+bool str_is_palindrome(cppstring str)
 {
-	cppstring cpy=cpycppstr(str);
-	str_reverse_order(&cpy);
-	bool palin=str_equal_values(cpy,str);
-	cpcds_destr_str(cpy);
+	bool palin=true;
+	for(size_t i=0;i<str.len>>1;++i)
+	{
+		palin=palin&&str.bytes[i]==str.bytes[str.len-i-1];
+	}
 	return palin;
 }
 cpcds_hash_v cpcds_hash_str(cppstring str)
