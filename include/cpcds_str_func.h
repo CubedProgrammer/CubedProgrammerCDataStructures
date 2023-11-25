@@ -1,7 +1,7 @@
 #ifndef __cplusplus
 #ifndef Included_cpcds_str_func_h
 #define Included_cpcds_str_func_h
-#include<cppstring.h>
+#include<cppstring_func_decl.h>
 cppstring ull_to_cppstr(unsigned long long);
 cppstring ll_to_cppstr(long long);
 cppstring ul_to_cppstr(unsigned long);
