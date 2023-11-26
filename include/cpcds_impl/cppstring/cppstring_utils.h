@@ -20,7 +20,7 @@ size_t strindex_both_bounds(const cppstring*s,char c,size_t from,size_t to)
 	}
 	return index;
 }
-size_t strindex_lower_bound(const cppstring*s,char c,int from)
+size_t strindex_lower_bound(const cppstring*s,char c,size_t from)
 {
 	return strindex_both_bounds(s,c,from,s->len);
 }
